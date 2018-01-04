@@ -73,3 +73,11 @@ select {
 option {
           border: solid 1px #DDDDDD; 
 }
+
+.error-div{
+	text-align: center; 
+	width: 100%; 
+	background-color: red; 
+	margin-top: 5px; 
+	display: none;
+}
