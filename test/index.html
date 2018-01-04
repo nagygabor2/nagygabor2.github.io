@@ -35,101 +35,108 @@
 		<script src="mavhiba.js"></script>		
 	</head>
 	<body>
-		<div class="main-div col-sm-10 container">
-			<div class="col-sm-10">
+		<div class="main text-center">
+			<div class="header">
         		<h1>#MÁVHiba alpha</h1>
 			</div>
 			
-			<div class="row">
-					<label  class="col-xs-6 col-sm-6 control-label" for="complaint">Panasz típusa</label>
-					<select id="complaint" class="show-menu-arrow col-xs-6 col-sm-6">
-					  <option value="delay">Késés</option>
-					  <option value="canceled">Kimaradás</option>
-					  <option value="crowded">Zsúfoltság</option>
-					  <option value="noheating">Nem volt fűtés</option>
-					  <option value="noac">Nem működött a klímaberendezés</option>
-					  <option value="kidnapped">Nem nyíló ajtó</option>
-					  <option value="toohighac">Fagyasztó üzemmód</option>
-					  <option value="cantgeton">Nem lehetett felszállni</option>
-					  <option value="other">Egyéb</option>
+			<div class="content">
+				<div class="row">
+						<label  class="col-xs-6 col-sm-6 control-label" for="complaint">Panasz típusa</label>
+						<select id="complaint" class="show-menu-arrow col-xs-6 col-sm-6">
+						  <option value="delay">Késés</option>
+						  <option value="canceled">Kimaradás</option>
+						  <option value="crowded">Zsúfoltság</option>
+						  <option value="noheating">Nem volt fűtés</option>
+						  <option value="noac">Nem működött a klímaberendezés</option>
+						  <option value="kidnapped">Nem nyíló ajtó</option>
+						  <option value="toohighac">Fagyasztó üzemmód</option>
+						  <option value="cantgeton">Nem lehetett felszállni</option>
+						  <option value="other">Egyéb</option>
+						</select>
+				</div>
+
+				<div class="row">
+					<label  class="col-xs-6 col-sm-6 control-label" for="origin">Induló állomás</label>
+					<select id="origin" class="selectpicker show-menu-arrow col-xs-6 col-sm-6">
+					  <option>Esztergom</option>
+					  <option>Esztergom-Kertváros</option>
+					  <option>Dorog</option>
+					  <option>Leányvár</option>
+					  <option>Piliscsév</option>
+					  <option>Pilisjászfalu</option>
+					  <option>Magdolnavölgy</option>
+					  <option>Piliscsaba</option>
+					  <option>Klotildliget</option>
+					  <option>Pázmáneum</option>
+					  <option>Szabadságliget</option>
+					  <option>Pilisvörösvár</option>
+					  <option>Vörösvárbánya</option>
+					  <option>Szélhegy</option>
+					  <option>Solymár</option>
+					  <option>Üröm</option>
+					  <option>Aranyvölgy</option>
+					  <option>Óbuda</option>
+					  <option>Aquincum</option>
+					  <option>Újpest-Városkapu</option>
+					  <option>Angyalföld</option>
+					  <option>Rákosrendező</option>
+					  <option>Budapest-Nyugati</option>
 					</select>
+				</div>
+
+				<div class="row">
+					<label  class="col-sm-6 col-xs-6 control-label" for="destination">Célállomás</label>
+					<select id="destination" class="selectpicker show-menu-arrow col-sm-6 col-xs-6">
+					  <option>Esztergom</option>
+					  <option>Esztergom-Kertváros</option>
+					  <option>Dorog</option>
+					  <option>Leányvár</option>
+					  <option>Piliscsév</option>
+					  <option>Pilisjászfalu</option>
+					  <option>Magdolnavölgy</option>
+					  <option>Piliscsaba</option>
+					  <option>Klotildliget</option>
+					  <option>Pázmáneum</option>
+					  <option>Szabadságliget</option>
+					  <option>Pilisvörösvár</option>
+					  <option>Vörösvárbánya</option>
+					  <option>Szélhegy</option>
+					  <option>Solymár</option>
+					  <option>Üröm</option>
+					  <option>Aranyvölgy</option>
+					  <option>Óbuda</option>
+					  <option>Aquincum</option>
+					  <option>Újpest-Városkapu</option>
+					  <option>Angyalföld</option>
+					  <option>Rákosrendező</option>
+					  <option>Budapest-Nyugati</option>
+					</select>
+				</div>		
+				
+				<div class="row">
+					<label class="col-sm-6 col-xs-6 control-label" for="schedule">Indulás ideje</label>
+					<input type="text" id="schedule" placeholder="Utazás ideje" class="col-sm-6 col-xs-6">
+				</div>
+
+				<div class="row">
+					<label  class="col-sm-6 col-xs-6 control-label" for="customer_name">Név</label>
+					<input type="text" id="customer_name" placeholder="Add meg a nevedet!" class="col-sm-6 col-xs-6"/>
+				</div>
+
+				<div class="row">
+					<label  class="col-sm-6 col-xs-6 control-label" for="comment">Megjegyzés</label>
+					<textarea id="comment" placeholder="Részletek..." style="color: black" class="col-sm-6 col-xs-6"></textarea>
+				</div>
+
 			</div>
-
-            <div class="row">
-				<label  class="col-xs-6 col-sm-6 control-label" for="origin">Induló állomás</label>
-				<select id="origin" class="selectpicker show-menu-arrow col-xs-6 col-sm-6">
-				  <option>Esztergom</option>
-				  <option>Esztergom-Kertváros</option>
-				  <option>Dorog</option>
-				  <option>Leányvár</option>
-				  <option>Piliscsév</option>
-				  <option>Pilisjászfalu</option>
-				  <option>Magdolnavölgy</option>
-				  <option>Piliscsaba</option>
-				  <option>Klotildliget</option>
-				  <option>Pázmáneum</option>
-				  <option>Szabadságliget</option>
-				  <option>Pilisvörösvár</option>
-				  <option>Vörösvárbánya</option>
-				  <option>Szélhegy</option>
-				  <option>Solymár</option>
-				  <option>Üröm</option>
-				  <option>Aranyvölgy</option>
-				  <option>Óbuda</option>
-				  <option>Aquincum</option>
-				  <option>Újpest-Városkapu</option>
-				  <option>Angyalföld</option>
-				  <option>Rákosrendező</option>
-				  <option>Budapest-Nyugati</option>
-				</select>
-            </div>
-
-            <div class="row">
-				<label  class="col-sm-6 col-xs-6 control-label" for="destination">Célállomás</label>
-				<select id="destination" class="selectpicker show-menu-arrow col-sm-6 col-xs-6">
-				  <option>Esztergom</option>
-				  <option>Esztergom-Kertváros</option>
-				  <option>Dorog</option>
-				  <option>Leányvár</option>
-				  <option>Piliscsév</option>
-				  <option>Pilisjászfalu</option>
-				  <option>Magdolnavölgy</option>
-				  <option>Piliscsaba</option>
-				  <option>Klotildliget</option>
-				  <option>Pázmáneum</option>
-				  <option>Szabadságliget</option>
-				  <option>Pilisvörösvár</option>
-				  <option>Vörösvárbánya</option>
-				  <option>Szélhegy</option>
-				  <option>Solymár</option>
-				  <option>Üröm</option>
-				  <option>Aranyvölgy</option>
-				  <option>Óbuda</option>
-				  <option>Aquincum</option>
-				  <option>Újpest-Városkapu</option>
-				  <option>Angyalföld</option>
-				  <option>Rákosrendező</option>
-				  <option>Budapest-Nyugati</option>
-				</select>
-            </div>		
-			
-			<div class="row">
-				<label  class="col-sm-6 col-xs-6 control-label" for="schedule">Indulás ideje</label>
-				<input type="text" id="schedule" placeholder="Utazás ideje" class="col-sm-6 col-xs-6">
-			</div>
-
-			<div class="row">
-				<label  class="col-sm-6 col-xs-6 control-label" for="customer_name">Név</label>
-				<input type="text" id="customer_name" placeholder="Add meg a nevedet!" class="col-sm-6 col-xs-6"/>
-			</div>
-
 			<div style="margin:10px">
-					<input type="button" id="submitbtn" value="Panasz küldése">
+				<input type="button" id="submitbtn" value="Panasz küldése">
 			</div>
-			<div id="error-div" style="text-aign: center; width: 100%; background-color: red; margin: 10px; display: none;">
+			<div id="error-div" style="text-aign: center; width: 100%; background-color: red; margin: 5px; display: none;">
 			  Error!
 			</div>
-			
+
 		</div>
 
 	</body>
