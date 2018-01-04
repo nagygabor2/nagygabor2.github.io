@@ -6,10 +6,17 @@ input[type=text] {
     min-width: 10em;
 	color:black;
 	padding: 0;
+	font-size: 0.8em;
 }
 
 .datetime-input{
 	font-size: 0.7em;
+}
+
+.ta{
+	color: black;
+	padding: 0;
+	font-size: 0.8em;
 }
 
 p {
