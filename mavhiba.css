@@ -1,30 +1,63 @@
-body {
-    padding: 20px;
-}
-
 label {
     font-weight: bold;
 }
 
 input[type=text] {
-    width: 10em
+    min-width: 10em;
+	color:black;
+	padding: 0;
+	font-size: 0.8em;
+}
+
+.datetime-input{
+	font-size: 0.7em;
+}
+
+.ta{
+	color: black;
+	padding: 0;
+	font-size: 0.8em;
 }
 
 p {
-    margin: 10em 0 0;
+    margin: 1em 0 0;
 }
 
-.main-div{
-  width:730px; 
+.main{
+  float:none;
+  margin: 20 auto;
   background-color:#3B5998; 
-  text-align:center;
   color:#FFFFFF;
-  font-size: big;
   line-height: 1.5em;
   padding: 20px;
+  text-align: center;
+  max-width: 680px;
 }
 
-.button{
+.header{
+	text-align: center;
+}
+
+.content{
+	border: 1px white solid;
+	float: none;
+	padding: 5px;
+}
+
+.row{
+	padding: 5px;
+	text-align: left;
+	margin: 5px;
+	vertical-align: middle;
+}
+
+label.control-label{
+	font-size: 110%;
+	vertical-align: middle;
+}
+
+input[type=button]{
+	color: #3B5998;
     background-color:#ECEEF5;
     border:1px solid #CAD4E7;
     text-decoration:none;
@@ -35,23 +68,28 @@ padding: 2px 3px 2px 2px;
 margin-right:5px;
 }
 
-.button:hover{
+button:hover{
     border:1px solid #9DACCE;
     text-decoration:none;
+	background-color: #00FF00;
      
 }
 
-.col{
-	width: 48%;
-	display:inline-block;
-	margin: 5px;
+select {
+    width:700px; 
+    overflow:visible; 
+    white-space:pre; 
+    text-overflow:ellipsis;
+	color: black;
+}
+option {
+          border: solid 1px #DDDDDD; 
 }
 
-.col-left{
-	float:left;
-	text-align: right;
-}
-
-.col-right{
-	text-align: left;
+.error-div{
+	text-align: center; 
+	width: 100%; 
+	background-color: red; 
+	margin-top: 5px; 
+	display: none;
 }
