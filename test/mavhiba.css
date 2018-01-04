@@ -1,3 +1,11 @@
+@media (min-width: 576px) {
+	.ta{
+		color: black;
+		padding: 0;
+		font-size: 0.3em;
+	}
+}
+
 label {
     font-weight: bold;
 }
