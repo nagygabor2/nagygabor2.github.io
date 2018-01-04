@@ -8,7 +8,7 @@ var request;
 
 $(document).ready(function() {
   
-    $('#schedule').bootstrapMaterialDatePicker({ switchOnClick: true, format : 'YYYY.MMMM.DD dddd - HH:mm', lang : 'hu', weekStart : 1});
+    $('#schedule').bootstrapMaterialDatePicker({ switchOnClick: true, format : 'YYYY MMMM DD, dddd - HH:mm', lang : 'hu', weekStart : 1});
 
   $("#submitbtn").click(function(index){  
 	  var complaint_orig = $( "#complaint" ).val();
