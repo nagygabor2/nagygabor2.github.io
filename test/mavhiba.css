@@ -3,8 +3,7 @@ label {
 }
 
 input[type=text] {
-    min-width: 8em;
-	color:red;
+	color:black;
 	padding: 0;
 }
 
