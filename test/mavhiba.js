@@ -7,8 +7,8 @@ var recepient = "eszrevetel@mav-start._hu_";
 var request;
 
 $(document).ready(function() {
-  
-    $('#schedule').bootstrapMaterialDatePicker({ switchOnClick: true, format : 'YYYY.MM.DD, dddd - HH:mm', lang : 'hu', weekStart : 1});
+
+  $('#schedule').bootstrapMaterialDatePicker({ switchOnClick: true, format : 'YYYY.MM.DD, dddd - HH:mm', lang : 'hu', weekStart : 1});
 
   $("#submitbtn").click(function(index){  
 	  var complaint_orig = $( "#complaint" ).val();
@@ -50,12 +50,12 @@ $(document).ready(function() {
 		request = $.ajax({
 			url: "https://script.google.com/macros/s/AKfycbxFTCEc7kmocjjvTaHuXzfPxBaL0fZMXA8c1M72SYj0wyYgspA/exec",
 			type: "GET",
-			data: "customer_n=" + customer_n + "&complaint=" + complaint + "&origin=" + origin + "&destination=" + destination + "&schedule=" + schedule + "&comment=" + comment
+			data: "customer_n=" + customer_n + "&complaint=" + complaint + "&origin=" + origin + "&destination=" + destination + "&schedule=" + schedule + "&comment=" + comment + "&clientinfo=" + navigator.language + "\r\n" + navigator.userAgent
 		});
 
 		// Callback handler that will be called on failure
 		request.fail(function (jqXHR, textStatus, errorThrown){
-			consloe.log(
+			console.log(
 			"The following error occurred: "+
 			textStatus, errorThrown
 			);
