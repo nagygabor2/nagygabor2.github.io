@@ -8,9 +8,12 @@ var request;
 
 $(document).ready(function() {
 
-  $('#schedule').bootstrapMaterialDatePicker({ switchOnClick: true, format : 'YYYY.MM.DD, dddd - HH:mm', lang : 'hu', weekStart : 1});
+  $('#schedule').bootstrapMaterialDatePicker({ switchOnClick: true, format : 'YYYY.MM.DD, dddd - HH:mm', lang : 'hu', weekStart : 1, maxDate : new Date()});
 
   $("#submitbtn").click(function(index){  
+  
+	  console.log($('#schedule').bootstrapMaterialDatePicker());
+	return;
 	  var complaint_orig = $( "#complaint" ).val();
       var complaint = messages[complaint_orig];
       var schedule = $("#schedule").val();
