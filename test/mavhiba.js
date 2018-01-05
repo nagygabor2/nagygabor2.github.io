@@ -50,7 +50,7 @@ $(document).ready(function() {
 		request = $.ajax({
 			url: "https://script.google.com/macros/s/AKfycbxFTCEc7kmocjjvTaHuXzfPxBaL0fZMXA8c1M72SYj0wyYgspA/exec",
 			type: "GET",
-			data: "customer_n=" + customer_n + "&complaint=" + complaint + "&origin=" + origin + "&destination=" + destination + "&schedule=" + schedule + "&comment=" + comment + "&clientinfo=" + navigator.language + "\r\n" + navigator.userAgent
+			data: "customer_n=" + customer_n + "&complaint=" + complaint_orig + "&origin=" + origin + "&destination=" + destination + "&schedule=" + schedule + "&comment=" + comment + "&clientinfo=" + navigator.language + "\r\n" + navigator.userAgent
 		});
 
 		// Callback handler that will be called on failure
