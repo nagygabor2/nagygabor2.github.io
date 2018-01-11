@@ -4,7 +4,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta property="og:title" content="#mavhiba"/>
      
-     <title>MÁVHiba alpha #2</title>
+     <title>MÁVHiba</title>
      
 		<link rel="stylesheet"
 			  href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.10/css/bootstrap-material-design.min.css"/>
@@ -37,7 +37,7 @@
 	<body>
 		<div class="main text-center">
 			<div class="header">
-        		<h1>#MÁVHiba alpha #2</h1>
+        		<h1>#MÁVHiba beta</h1>
 			</div>
 			
 			<div class="content">
@@ -124,6 +124,11 @@
 					<input type="text" id="schedule" placeholder="Utazás ideje" class="col-sm-6 col-xs-6 datetime-input">
 				</div>
 
+				<div class="row" id="traindiv" style="display: none;">
+					<label class="col-sm-6 col-xs-6 control-label" for="train">Vonatszám</label>
+					<input type="text" id="train" class="col-sm-6 col-xs-6">
+				</div>
+				
 				<div class="row">
 					<label  class="col-sm-6 col-xs-6 control-label" for="customer_name">Név</label>
 					<input type="text" id="customer_name" placeholder="Utas neve" class="col-sm-6 col-xs-6"/>
@@ -135,13 +140,28 @@
 				</div>
 
 			</div>
-			<div id="error-div" class="error-div">
+			<div id="error-div" class="error-div alert alert-danger" role="alert">
 			  Error!
 			</div>
 			<div style="margin:10px">
 				<input type="button" id="submitbtn" value="Panasz küldése">
 			</div>
 
+			<div id="info" style="display: none;" class="error-div alert alert-info" role="alert">
+				Created by <a href="https://github.com/nagygabor2">Nagy Gábor</a>
+				<br/>
+				Credits
+				<br/>
+				<a href="https://bitbucket.org/oroce/elvira-api">elvira-api</a>: Róbert Oroszi
+				<br/>
+				<a href="https://github.com/T00rk/bootstrap-material-datetimepicker">bootstrapMaterialDatePicker</a>: T00rk
+				<br/>
+				And last but not least: Toci :-)
+			</div>
+
+			<div style="text-align: right; hover">
+				<div class="glyphicon glyphicon-info-sign" style="cursor: pointer;" id="infoicon"/>
+			</div>
 		</div>
 
 	</body>
