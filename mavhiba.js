@@ -3,7 +3,7 @@ var template = "Tisztelt Ügyfélszolgálat!%0D%0A%0D%0APanaszt szeretnék tenni
 
 var messages = {delay:"mivel a vonat [delay] perc késéssel közlekedett.", canceled: "mivel a vonat kimaradt, nem közlekedett.", crowded:"mivel a vonat rendkívül zsúfolt volt.", noheating:"mivel a vonaton a hűvös időjárás ellenére nem volt fűtés.", noac:"mivel a vonaton a rendkívül meleg időjárás ellenére nem üzemelt a klímaberendezés.", toohighac:"mivel a vonaton a klímaberendezés extrém alacsony hőmérsékleten működött.", kidnapped:"mivel a vonat ajtaja nem nyílt ki és a vonaton ragadtam.",cantgeton:"mivel nem tudtam felszállni a vonatra a rendkívüli zsúfoltság miatt.", other:"az alábbi problémák miatt:%0D%0A"};
 
-var recepient = "eszrevetel@mav-start._hu_";
+var recepient = "eszrevetel@mav-start.hu";
 var request;
 
 $(document).ready(function() {
