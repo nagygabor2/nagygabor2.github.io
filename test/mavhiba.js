@@ -50,7 +50,7 @@ $(document).ready(function() {
 
 		 req = $.ajax({
 			type: "GET",
-			url: "http://apiv2.oroszi.net/elvira",
+			url: "https://apiv2.oroszi.net/elvira",
 			dataType: "json",
 			data: {
 				from: orig,
