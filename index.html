@@ -44,6 +44,7 @@
 				<div class="row">
 						<label  class="col-xs-6 col-sm-6 control-label" for="complaint">Panasz típusa</label>
 						<select id="complaint" class="show-menu-arrow col-xs-6 col-sm-6" style="padding: 0;">
+						  <option value="none"></option>
 						  <option value="delay">Késés</option>
 						  <option value="canceled">Kimaradás</option>
 						  <option value="crowded">Zsúfoltság</option>
@@ -54,6 +55,10 @@
 						  <option value="cantgeton">Nem lehetett felszállni</option>
 						  <option value="other">Egyéb</option>
 						</select>
+				</div>
+				<div id="delay" class="row" style="display: none;">
+						<label  class="col-xs-6 col-sm-6 control-label" for="delay">Késés ideje</label>
+						<input type="number" id="delaymin" placeholder="Késés (perc)" class="input input-html5-number" style="color:black;"/>
 				</div>
 
 				<div class="row">
