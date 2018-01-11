@@ -20,8 +20,6 @@ $(document).ready(function() {
 	});
 
   $("#submitbtn").click(function(index){  
-
-      $('#error-div').hide();
   
 	  var complaint_orig = $( "#complaint" ).val();
 	  var hasDelay = complaint_orig == "delay";
@@ -70,12 +68,13 @@ $(document).ready(function() {
 	  }
     
      $('#error-div').hide();
+	 
 	 if(hasDelay){
 		complaint = complaint.replace("[delay]", delay);
 	 }
 	 
       var message = template.replace("[complaint]", complaint + "%0D%0A" + comment).replace("[origin]", origin).replace("[destination]", destination).replace("[schedule]", schedule).replace("[customer_name]", customer_n);
-      //window.open("mailto:" + recepient + "?subject=Panasz&body=" + message, "_blank");
+      window.open("mailto:" + recepient + "?subject=Panasz&body=" + message, "_blank");
 
 		request = $.ajax({
 			url: "https://script.google.com/macros/s/AKfycbxFTCEc7kmocjjvTaHuXzfPxBaL0fZMXA8c1M72SYj0wyYgspA/exec",
