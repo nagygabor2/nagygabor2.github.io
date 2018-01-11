@@ -9,7 +9,7 @@ input[type=text] {
 	font-size: 0.8em;
 }
 
-input[type=number]{
+.numberinput{
     min-width: 10em;
 	color:black;
 	padding: 0;
