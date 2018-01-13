@@ -40,6 +40,35 @@
         		<h1>#MÁVHiba beta</h1>
 			</div>
 			
+			<div style="text-align: right; hover">
+				<div class="glyphicon glyphicon-question-sign" style="cursor: pointer;" id="helpicon"/>
+			</div>
+
+			<div id="help" style="display: none; text-align: center" class="error-div alert alert-info" role="alert">
+				<h5>
+					Hogyan használjam a hibabejelentőt?
+				</h5>
+				<p style="text-align: justify; font-size: smaller;">
+					1) Válassza ki a tapasztalt problémának megfelelő Panasz típust. Ha nem talál megfelelőt, válassza az "Egyéb" értéket, majd írja le a panaszát a "Megjegyzés" mezőben ("Egyéb") kiválasztásakor ez kötelező! Amennyiben a "Késés"-t választja ki, egy plusz mezőben megadhatja a késés idejét, percekben (kötelező)
+					<br/>
+					2) Válassza ki az induló- és célállomást (ahol fel- illetve leszállt a vonatról)!
+					<br/>
+					3) Válassza ki az indulás idejét (amikor az induló állomásról indulnia kellett volna a vonatnak)!
+					<br/>
+					4) Az induló- és célállomások illetve az idő megadása után a legközelebbi vonat járatszáma megjelenik a képernyőn. A Vonatszám mező szerkeszthető, így ha nem megfelelő vonatszám jelenik meg, az módosítható
+					<br/>
+					5) Adja meg a nevét! Ez fog szerepelni a bejelentésen
+					<br/>
+					6) A Megjegyzés mezőben a panasz további részleteit írhatja le
+					<br/>
+					7) A "Panasz küldése" gombra kattintva egy sablon email generálódik az itt megadott adatokkal, mely a számítógép/okostelefon alapértelmezett levelezőprogramjában fog megjelenni. Itt még lehetősége van a bejelentést szerkeszteni. A tényleges elküldést a levelezőprogramjában kell megtennie, a megfelelő email fiók kiválasztása után. A bejelentés mindig a saját, levelezőprogramban kiválasztott címről történik, az eszrevetel@mav-start.hu email címre küldéssel.
+					<br/><br/>
+					A hibabejelentő az itt megadott adatokat statisztikakészítés, hibakeresés illetve rosszindulatú felhasználás megelőzése céljából egy adatbázisban tárolja. Ennek részleteiről az oldal alján található <span style="text-align: justify; font-size: smaller;" class="glyphicon glyphicon-info-sign"></span> ikonra kattintva tájékozódhat, illetve adatkezeléssel kapcsolatos észrevételeihez is itt talál információkat. A rögzített adatok harmadik fél birtokába csak és kizárólag a jogszabályokban megfogalmazott esetekben és feltételekkel juthatnak.
+				</p>
+			</div>
+
+			<br/>
+			
 			<div class="content">
 				<div class="row">
 						<label  class="col-xs-6 col-sm-6 control-label" for="complaint">Panasz típusa</label>
@@ -143,7 +172,7 @@
 			<div id="error-div" class="error-div alert alert-danger" role="alert">
 			  Error!
 			</div>
-			<div style="margin:10px">
+			<div style="margin:10px; text-align: center;">
 				<input type="button" id="submitbtn" value="Panasz küldése">
 			</div>
 
@@ -152,8 +181,20 @@
 			</div>
 
 			<div id="info" style="display: none; text-align: center" class="error-div alert alert-info" role="alert">
-				Created by <a href="https://github.com/nagygabor2">Nagy Gábor</a>
+				Készítette: <a id="maillink" href="mailto:n(potty)gabor(valahol)gmx(potty)net?subject=[#mavhiba]">Nagy Gábor</a>
 				<br/>
+				<hr/>
+				A "Panasz küldése" gomb megnyomásakor az alkalmazás az űrlapon megadott adatokon túl az alábbi adatokat tárolja: a felhasználó böngészőjének adatai illetve a felhasználó IP címe és az abból legálisan leszármaztatható információk. Ezeket itt tekintheti meg.
+				<div style="hover">
+					<div class="glyphicon glyphicon-circle-arrow-down" style="cursor: pointer;" id="loginfoicon"/>
+				</div>
+				<div id="loginfo" style="display: none; text-align: center" class="error-div alert alert-info" role="alert">
+				</div>
+				<br/>
+				Ennek célja az alkalmazás minőségének javítása, hibekeresés, illetve az esetelges visszaélések lehetőségének csökkentése. 
+				<br/>A "Panasz küldése" gomb megnyomásával hozzájárul ezen adatainak tárolásához.
+				<br/>
+				<hr/>
 				Credits
 				<br/>
 				<a href="https://bitbucket.org/oroce/elvira-api">elvira-api</a>: Róbert Oroszi

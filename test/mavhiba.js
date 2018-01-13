@@ -7,9 +7,19 @@ var recepient = "eszrevetel@mav-start.hu";
 var request;
 var req;
 var train;
+var client;
 
 $(document).ready(function() {
 
+	try{
+	  $.getJSON('http://freegeoip.net/json/?callback=?', function(data) {
+		console.log(data);
+		client = JSON.stringify(data, null, 2)
+	  });
+	} catch(e){
+		console.log(e);
+	}
+  
   $("#infoicon").click(function(){
 	$("#info").toggle();
   });
@@ -131,7 +141,7 @@ $(document).ready(function() {
 		request = $.ajax({
 			url: "https://script.google.com/macros/s/AKfycbxFTCEc7kmocjjvTaHuXzfPxBaL0fZMXA8c1M72SYj0wyYgspA/exec",
 			type: "GET",
-			data: "customer_n=" + customer_n + "&complaint=" + complaint_orig + "&origin=" + origin + "&destination=" + destination + "&schedule=" + schedule + "&comment=" + comment + "&clientinfo=" + navigator.language + "\r\n" + navigator.userAgent + "&delay=" + delay + "&train=" + train
+			data: "customer_n=" + customer_n + "&complaint=" + complaint_orig + "&origin=" + origin + "&destination=" + destination + "&schedule=" + schedule + "&comment=" + comment + "&clientinfo=" + navigator.language + "\r\n" + navigator.userAgent + "&delay=" + delay + "&train=" + train + "&client=" + client + "&sheet=TestSheet"
 		});
 
 		// Callback handler that will be called on failure

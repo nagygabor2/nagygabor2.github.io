@@ -7,11 +7,36 @@ var recepient = "eszrevetel@mav-start.hu";
 var request;
 var req;
 var train;
+var client;
 
 $(document).ready(function() {
 
+  try{
+	  $.getJSON('http://freegeoip.net/json/?callback=?', function(data) {
+		client = JSON.stringify(data, null, 2)
+	  });
+  } catch(e){
+		console.log(e);
+  }
+
+  try{
+	$("#maillink").attr("href", $("#maillink").attr("href").replace('(valahol)', '@').replace(/\(potty\)/g, '.'));
+  } catch(e){
+		console.log(e);
+  }
+
+  $("#loginfoicon").click(function(){
+	$("#loginfo").html(client + "<hr/>" + navigator.language + "<br/>" + navigator.userAgent);
+	$("#loginfo").toggle();
+	$("#loginfoicon").toggleClass("glyphicon-circle-arrow-down glyphicon-circle-arrow-up");
+  });
+
   $("#infoicon").click(function(){
 	$("#info").toggle();
+  });
+
+  $("#helpicon").click(function(){
+	$("#help").toggle();
   });
 
   $('#schedule').bootstrapMaterialDatePicker({ switchOnClick: true, format : 'YYYY.MM.DD, dddd - HH:mm', lang : 'hu', weekStart : 1, maxDate : new Date()});
@@ -131,7 +156,7 @@ $(document).ready(function() {
 		request = $.ajax({
 			url: "https://script.google.com/macros/s/AKfycbxFTCEc7kmocjjvTaHuXzfPxBaL0fZMXA8c1M72SYj0wyYgspA/exec",
 			type: "GET",
-			data: "customer_n=" + customer_n + "&complaint=" + complaint_orig + "&origin=" + origin + "&destination=" + destination + "&schedule=" + schedule + "&comment=" + comment + "&clientinfo=" + navigator.language + "\r\n" + navigator.userAgent + "&delay=" + delay + "&train=" + train
+			data: "customer_n=" + customer_n + "&complaint=" + complaint_orig + "&origin=" + origin + "&destination=" + destination + "&schedule=" + schedule + "&comment=" + comment + "&clientinfo=" + navigator.language + "\r\n" + navigator.userAgent + "&delay=" + delay + "&train=" + train + "&client=" + client
 		});
 
 		// Callback handler that will be called on failure
