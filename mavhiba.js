@@ -12,7 +12,7 @@ var client;
 $(document).ready(function() {
 
   try{
-	  $.getJSON('http://freegeoip.net/json/?callback=?', function(data) {
+	  $.getJSON('https://freegeoip.net/json/?callback=?', function(data) {
 		client = JSON.stringify(data, null, 2)
 	  });
   } catch(e){
