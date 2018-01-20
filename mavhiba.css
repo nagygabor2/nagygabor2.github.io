@@ -95,11 +95,7 @@ option {
 }
 
 .error-div{
-/*
 	text-align: center; 
-	width: 100%; 
-	background-color: red; 
-	*/
 	display: none;
 	margin-top: 5px; 
 }
